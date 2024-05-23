@@ -1,7 +1,10 @@
+'use client'
+
 import Avatar from '@/components/Avatar'
 import Social from '@/components/Social'
 import { Button } from '@/components/ui/button'
 import { Download } from 'lucide-react'
+import Typewriter from 'typewriter-effect'
 
 const HeroSection = () => {
   return (
@@ -11,7 +14,21 @@ const HeroSection = () => {
         <div className="max-w-[500px] sm:text-center ">
           <span className="text-xl">Frontend Developer</span>
           <h1 className="mt-4">
-            Hello I'm <br /> <span className="text-textColor">Nam Nguyễn</span>
+            Hello I'm <br />
+            <Typewriter
+              options={{
+                loop: true,
+                autoStart: true,
+                cursorClassName: 'Typewriter__cursor text-textColor ml-0'
+              }}
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString('<span class="text-textColor">Nam Nguyễn<span>')
+                  .pauseFor(2500)
+                  .deleteAll()
+                  .start()
+              }}
+            />
           </h1>
           <p className="mt-4 text-white/80">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
