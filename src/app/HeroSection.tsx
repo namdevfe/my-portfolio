@@ -2,8 +2,9 @@
 
 import Avatar from '@/components/Avatar'
 import Social from '@/components/Social'
-import { Button } from '@/components/ui/button'
+import { Button, buttonVariants } from '@/components/ui/button'
 import { Download } from 'lucide-react'
+import Link from 'next/link'
 import Typewriter from 'typewriter-effect'
 
 const HeroSection = () => {
@@ -39,13 +40,19 @@ const HeroSection = () => {
 
           {/* Download CV & Socials */}
           <div className="mt-4 flex items-center gap-5 sm:flex-col">
-            <Button
-              variant="outline"
-              className="text-textColor bg-transparent hover:bg-textColor-hover border-textColor flex items-center gap-2 py-5 px-3"
+            <Link
+              href="/resume/Nguyen-Kim-Quoc-Nam-resume.pdf"
+              download="Nguyen-Kim-Quoc-Nam-resume.pdf"
+              target="_blank"
+              className={buttonVariants({
+                variant: 'outline',
+                className:
+                  'text-textColor bg-transparent hover:bg-textColor-hover border-textColor flex items-center gap-2 py-5 px-3'
+              })}
             >
               Download CV
               <Download />
-            </Button>
+            </Link>
 
             <Social />
           </div>
