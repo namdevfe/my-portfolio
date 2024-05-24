@@ -97,4 +97,12 @@
   .layout-container {
     @apply w-full max-w-[1280px] md:max-w-[1140px] sm:max-w-[960px] xs:max-w-full mx-auto px-[15px];
   }
+
+  .text-stroke-1 {
+    -webkit-text-stroke: 1px #ffffff;
+  }
+
+  .text-stroke-1-hover {
+    -webkit-text-stroke: 1px #00ff99;
+  }
 }
