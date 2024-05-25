@@ -3,13 +3,15 @@
 import { cn } from '@/lib/utils'
 import CountUp from 'react-countup'
 
-const stats: { count: number; text: string }[] = [
+type StatType = { count: number; text: string }
+
+const stats: StatType[] = [
   {
-    count: 12,
+    count: 1,
     text: 'Years of experience'
   },
   {
-    count: 10,
+    count: 6,
     text: 'Projects completed'
   },
   {
@@ -17,13 +19,14 @@ const stats: { count: number; text: string }[] = [
     text: 'Technologies mastered'
   },
   {
-    count: 500,
+    count: 1500,
     text: 'Code commits'
   }
 ]
+
 const StatsSection = () => {
   return (
-    <section className="pt-12 sm:pt-[200px]">
+    <section className="pt-[60px] sm:pt-[30px] xs:pt-[270px] xxxs:pt-[440px]">
       <div className="layout-container">
         <div className="flex items-center justify-center gap-10 flex-wrap">
           {stats.map((item, index) => (

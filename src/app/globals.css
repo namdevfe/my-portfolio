@@ -95,7 +95,7 @@
 
 @layer utilities {
   .layout-container {
-    @apply w-full max-w-[1280px] md:max-w-[1140px] sm:max-w-[960px] xs:max-w-full mx-auto px-[15px];
+    @apply w-full max-w-[1280px] md:max-w-[1140px] sm:max-w-[960px] xs:max-w-full mx-auto px-[15px] relative;
   }
 
   .text-stroke-1 {

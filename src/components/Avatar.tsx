@@ -7,21 +7,21 @@ const Avatar = () => {
   return (
     <div className="w-full relative">
       <>
-        <div className="w-[500px] h-[500px] xs:w-[300px] xs:h-[300px] mix-blend-lighten relative">
+        <div className="flex w-[480px] h-[480px] sm:w-[300px] sm:h-[300px] mix-blend-lighten relative overflow-hidden">
           <Image
             src="/img/avatar.png"
             quality={100}
             priority
             fill
             sizes="100%"
-            className="w-full h-full object-contain"
-            alt="avatar image"
+            className="object-contain !left-2"
+            alt="Avatar"
           />
         </div>
 
         {/* Circle */}
         <motion.svg
-          className="w-[506px] h-[506px] xs:w-[306px] xs:h-[306px] absolute top-0 left-0"
+          className="w-[506px] h-[506px] sm:w-[306px] sm:h-[306px] absolute top-0 left-0"
           fill="transparent"
           viewBox="0 0 506 506"
           xmlns="http://www.w3.org/2000/svg"
