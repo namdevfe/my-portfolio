@@ -56,8 +56,12 @@ export const about: AboutType = {
       fieldValue: 'nguyenkimquocnam@gmail.com'
     },
     {
+      fieldName: 'Address',
+      fieldValue: 'Hoc Mon District, Ho Chi Minh City'
+    },
+    {
       fieldName: 'Experience',
-      fieldValue: '12+ Years'
+      fieldValue: '1+ Years'
     }
   ]
 }
@@ -71,6 +75,7 @@ export type ExperienceType = {
     company?: string
     position: string
     duration: string
+    project?: string
   }[]
 }
 
@@ -82,35 +87,33 @@ export const experience: ExperienceType = {
   item: [
     {
       position: 'Front-End Developer',
-      duration: '2023 - Present'
+      duration: 'Jan 2024 - Feb 2024',
+      company: 'CFD Circle',
+      project: 'CFD Shop'
     },
     {
       position: 'Front-End Developer',
-      duration: '2023 - Present'
+      duration: 'Oct 2023 - Nov 2023',
+      company: 'CFD Circle',
+      project: 'CFD Courses'
     },
     {
       position: 'Front-End Developer',
-      duration: '2023 - Present'
+      duration: 'Oct 2023 - Nov 2023',
+      project: 'Finance Flow',
+      company: 'CFD Circle'
+    },
+
+    {
+      position: 'Front-End Developer',
+      duration: 'Oct 2023 - Nov 2023',
+      project: 'Wooder Landing Page',
+      company: 'CFD Circle'
     },
     {
       position: 'Front-End Developer',
-      duration: '2023 - Present',
-      company: 'Martech JSC'
-    },
-    {
-      position: 'Front-End Developer',
-      duration: '2023 - Present',
-      company: 'Martech JSC'
-    },
-    {
-      position: 'Front-End Developer',
-      duration: '2023 - Present',
-      company: 'Martech JSC'
-    },
-    {
-      position: 'Front-End Developer',
-      duration: '2023 - Present',
-      company: 'Martech JSC'
+      duration: 'Mar 2024 - Apr 2024 ',
+      company: 'Martech JSC Company'
     }
   ]
 }
@@ -173,14 +176,7 @@ export const skills: SkillsType = {
       icon: '/img/icon-javascript.svg',
       name: 'JavaScript'
     },
-    {
-      icon: '/img/icon-reactjs.svg',
-      name: 'ReactJS'
-    },
-    {
-      icon: '/img/icon-nextjs.svg',
-      name: 'Next.js'
-    },
+
     {
       icon: '/img/icon-tailwindcss.svg',
       name: 'TailwindCss'
@@ -190,8 +186,28 @@ export const skills: SkillsType = {
       name: 'Sass'
     },
     {
+      icon: '/img/icon-reactjs.svg',
+      name: 'ReactJS'
+    },
+    {
+      icon: '/img/icon-nextjs.svg',
+      name: 'Next.js'
+    },
+    {
       icon: '/img/icon-figma.svg',
       name: 'Figma'
+    },
+    {
+      icon: '/img/icon-reactjs.svg',
+      name: 'ReactJS'
+    },
+    {
+      icon: '/img/icon-nodejs.svg',
+      name: 'Node.js'
+    },
+    {
+      icon: '/img/icon-mysql.svg',
+      name: 'MySQL'
     }
   ]
 }

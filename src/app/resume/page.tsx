@@ -24,7 +24,7 @@ const ResumePage = () => {
           transition: {
             delay: 2,
             duration: 0.4,
-            ease: 'easeIn'
+            ease: 'easeInOut'
           }
         }}
       >
@@ -55,6 +55,7 @@ const ResumePage = () => {
                         {ex.duration}
                       </div>
                       <h3 className="mt-2 text-xl">{ex.position}</h3>
+                      {ex.project && <div>{ex.project}</div>}
                       {ex.company && (
                         <div className="flex items-center gap-2 mt-4 sm:justify-center">
                           {/* Dot */}
@@ -75,7 +76,7 @@ const ResumePage = () => {
               <h2>{education.title}</h2>
               <p className="mt-3 text-white/60">{education.description}</p>
               <ScrollArea className="h-[400px]">
-                <div className="grid grid-cols-2 gap-5 mt-3">
+                <div className="grid grid-cols-2 gap-5 mt-3 xs:grid-cols-1">
                   {education.item.map((edu, index) => (
                     <div
                       key={index}
@@ -140,7 +141,7 @@ const ResumePage = () => {
                     key={index}
                     className="flex items-center gap-2 sm:justify-center"
                   >
-                    <span className="text-white/60 ">{item.fieldName}</span>
+                    <span className="text-white/60">{item.fieldName}</span>
                     <span className="">{item.fieldValue}</span>
                   </div>
                 ))}

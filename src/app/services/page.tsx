@@ -47,7 +47,18 @@ const ServicesPage = () => {
     <main className="pt-[136px]">
       <section>
         <div className="layout-container h-full flex items-center">
-          <motion.div className="grid grid-cols-2 gap-16 xs:grid-cols-1 xs:gap-4">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              transition: {
+                delay: 2,
+                duration: 0.4,
+                ease: 'easeInOut'
+              }
+            }}
+            className="grid grid-cols-2 gap-16 xs:grid-cols-1 xs:gap-4"
+          >
             {services.map((service, index) => (
               <div key={index} className="overflow-hidden">
                 <div className="flex items-center justify-between group">
