@@ -30,7 +30,7 @@ const Information = () => {
       {informations.map((info, index) => (
         <div key={index} className="flex items-center gap-6">
           {/* Icon */}
-          <div className="w-[72px] h-[72px] xs:w-[52px] xs:h-[52px] rounded bg-[#27272c] flex items-center justify-center text-textColor">
+          <div className="w-[72px] h-[72px] xs:w-[52px] xs:h-[52px] rounded bg-[#27272c] flex items-center justify-center text-textColor flex-shrink-0">
             {info.icon}
           </div>
 

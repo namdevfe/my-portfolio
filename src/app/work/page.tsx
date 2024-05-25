@@ -138,6 +138,7 @@ const WorkPage = () => {
                       fill
                       className="object-contain"
                       quality={100}
+                      sizes="100%"
                       alt={project.title}
                     />
                   </div>

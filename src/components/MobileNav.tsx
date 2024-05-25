@@ -6,13 +6,31 @@ import { menus } from '@/constants/general'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
+import { useEffect, useState } from 'react'
 
 const MobileNav = () => {
   const pathname = usePathname()
+  const [isOpenSheet, setIsOpenSheet] = useState<boolean>(false)
+
+  const handleOpenSheet = () => {
+    setIsOpenSheet(true)
+  }
+
+  const handleCloseSheet = () => {
+    setIsOpenSheet(false)
+  }
+
+  useEffect(() => {
+    handleCloseSheet()
+  }, [pathname])
   return (
-    <Sheet>
+    <Sheet defaultOpen={false} open={isOpenSheet} onOpenChange={setIsOpenSheet}>
       <SheetTrigger asChild>
-        <AlignRight size={32} className="text-textColor cursor-pointer" />
+        <AlignRight
+          size={32}
+          className="text-textColor cursor-pointer"
+          onClick={handleOpenSheet}
+        />
       </SheetTrigger>
       <SheetContent className="bg-mainColor border-l-0 flex items-center justify-center">
         {/* Links */}
