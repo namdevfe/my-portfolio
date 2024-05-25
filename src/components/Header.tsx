@@ -15,7 +15,6 @@ const Header = () => {
   useEffect(() => {
     const handleHeaderChange = () => {
       let scrollY = window.scrollY
-      console.log('🚀1---->', 1)
       if (scrollY > 60) {
         headerRef.current?.classList.add('bg-[#27272c]')
       } else {
