@@ -38,11 +38,10 @@ const HeroSection = () => {
 
           {/* Download CV & Socials */}
           <div className="mt-4 flex items-center gap-5 sm:flex-col">
-            <Link
-              href="/public/resume/Nguyen-Kim-Quoc-Nam-resume.pdf"
+            <a
+              href="/resume/Nguyen-Kim-Quoc-Nam-resume.pdf"
               download="Nguyen-Kim-Quoc-Nam-resume.pdf"
               target="_blank"
-              rel="noopener noreferrer"
               className={buttonVariants({
                 variant: 'outline',
                 className:
@@ -51,7 +50,7 @@ const HeroSection = () => {
             >
               Download CV
               <Download />
-            </Link>
+            </a>
 
             <Social />
           </div>
