@@ -211,3 +211,79 @@ export const skills: SkillsType = {
     }
   ]
 }
+
+export type ProjectType = {
+  num: string | number
+  category: string
+  title: string
+  description: string
+  techStack: string[]
+  image: string
+  live: string
+  sourceCode: string
+}
+
+export const projects: ProjectType[] = [
+  {
+    num: '01',
+    category: 'front-end',
+    title: 'My Portfolio',
+    description:
+      "This is my portfolio, it's used to introduce myself, my experience working in the front-end and the skills I have accumulated through the projects I have worked on.",
+    techStack: ['Html', 'Css', 'Typescript', 'Next.js', 'TailwindCss'],
+    image: '/img/project-portfolio.jpg',
+    live: 'https://namdev-portfolio.vercel.app/',
+    sourceCode: 'https://github.com/namdevfe/my-portfolio'
+  },
+  {
+    num: '02',
+    category: 'front-end',
+    title: 'CFD Shop',
+    description:
+      'This is ecomerce website have full all base feature, user will login to shopping and payment with other payment methods. This website is used for learning purposes with advanced concepts in React.js at CFD Circle.',
+    techStack: [
+      'Html',
+      'Css',
+      'Javascript',
+      'Sass',
+      'ReactJs',
+      'Redux Toolkit'
+    ],
+    image: '/img/project-cfdshop.jpg',
+    live: 'https://cfd-shop-smoky.vercel.app/',
+    sourceCode: 'https://github.com/namdevfe/cfd-shop'
+  },
+  {
+    num: '03',
+    category: 'front-end',
+    title: 'CFD Courses',
+    description:
+      "This is project is used to learn ReactJs basic, it's used to sold courses.",
+    techStack: ['Html', 'Css', 'Javascript', 'Sass', 'ReactJS'],
+    image: '/img/project-cfdcourses.jpg',
+    live: 'https://cfd-courses.vercel.app/',
+    sourceCode: 'https://github.com/namdevfe/cfd-courses'
+  },
+  {
+    num: '04',
+    category: 'front-end',
+    title: 'Finance Flow',
+    description:
+      'This is a project full of pages about virtual currency, the website provides user interactions with the website in the most friendly way and is compatible with different device screen sizes.',
+    techStack: ['Html', 'Css', 'Sass', 'Javascript'],
+    image: '/img/project-financeflow.jpg',
+    live: 'https://nguyenkimquocnam-dev.github.io/finance-flow',
+    sourceCode: 'https://github.com/nguyenkimquocnam-dev/finance-flow'
+  },
+  {
+    num: '05',
+    category: 'front-end',
+    title: 'Wooder',
+    description:
+      'This is a project landing pages about interior, the website provides user interactions with the website in the most friendly way and is compatible with different device screen sizes.',
+    techStack: ['Html', 'Css', 'Sass', 'Javascript'],
+    image: '/img/project-wooder.jpg',
+    live: 'https://nguyenkimquocnam-dev.github.io/wooder/',
+    sourceCode: 'https://github.com/nguyenkimquocnam-dev/wooder'
+  }
+]

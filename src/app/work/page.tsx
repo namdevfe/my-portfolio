@@ -15,73 +15,12 @@ import 'swiper/css'
 import { Swiper as SwiperType } from 'swiper/types'
 import Image from 'next/image'
 import WorkSliderButton from '@/app/work/WorkSliderButton'
-
-type ProjectType = {
-  num: string | number
-  category: string
-  title: string
-  description: string
-  techStack: string[]
-  image: string
-  live: string
-  sourceCode: string
-}
-
-const projects: ProjectType[] = [
-  {
-    num: '01',
-    category: 'frontend',
-    title: 'Project 01',
-    description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam aliquam officia possimus maiores minus placeat quas dolores accusantium, architecto odio iure repellat explicabo! Veritatis error eaque ratione fuga! Voluptates, aut?',
-    techStack: ['html', 'css', 'javascript'],
-    image: '/img/project-example.jpg',
-    live: '',
-    sourceCode: ''
-  },
-  {
-    num: '02',
-    category: 'frontend',
-    title: 'Project 02',
-    description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam aliquam officia possimus maiores minus placeat quas dolores accusantium, architecto odio iure repellat explicabo! Veritatis error eaque ratione fuga! Voluptates, aut?',
-    techStack: [
-      'html',
-      'css',
-      'javascript',
-      'sass',
-      'react',
-      'tailwind',
-      'next.js'
-    ],
-    image: '/img/project-example.jpg',
-    live: '',
-    sourceCode: ''
-  },
-  {
-    num: '03',
-    category: 'frontend',
-    title: 'Project 03',
-    description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam aliquam officia possimus maiores minus placeat quas dolores accusantium, architecto odio iure repellat explicabo! Veritatis error eaque ratione fuga! Voluptates, aut?',
-    techStack: [
-      'html',
-      'css',
-      'javascript',
-      'sass',
-      'react',
-      'tailwind',
-      'next.js'
-    ],
-    image: '/img/project-example.jpg',
-    live: '',
-    sourceCode: ''
-  }
-]
+import { ProjectType, projects } from '@/constants/general'
 
 const WorkPage = () => {
   const [currentProject, setCurrentProject] = useState<ProjectType>(projects[0])
 
+  // Handle slide change
   const handleSlideChange = (swiper: SwiperType) => {
     const currentProjectIndex = swiper.activeIndex
     setCurrentProject(projects[currentProjectIndex])
@@ -188,14 +127,16 @@ const WorkPage = () => {
             >
               {projects.map((project, index) => (
                 <SwiperSlide key={index} className="w-full">
-                  <div className="h-[460px] relative group cursor-pointer">
+                  <div className="h-[460px] relative group cursor-pointer bg-[#27272c]">
                     {/* Overlay */}
-                    <div className="bg-black opacity-60 w-full h-full absolute top-0 left-0 z-10 group-hover:opacity-0 transition-opacity duration-300"></div>
+                    <div className="bg-black opacity-60 w-full h-full absolute top-0 left-0 z-10 group-hover:opacity-0 transition-opacity duration-300 flex items-center justify-center text-7xl text-stroke-1 text-transparent">
+                      {project.title}
+                    </div>
                     <Image
                       src={project.image}
                       priority
                       fill
-                      className="object-cover"
+                      className="object-contain"
                       quality={100}
                       alt={project.title}
                     />

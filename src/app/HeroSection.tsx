@@ -40,8 +40,9 @@ const HeroSection = () => {
           <div className="mt-4 flex items-center gap-5 sm:flex-col">
             <Link
               href="/resume/Nguyen-Kim-Quoc-Nam-resume.pdf"
-              download="Nguyen-Kim-Quoc-Nam-resume.pdf"
+              // download="Nguyen-Kim-Quoc-Nam-resume.pdf"
               target="_blank"
+              rel="noopener noreferrer"
               className={buttonVariants({
                 variant: 'outline',
                 className:
