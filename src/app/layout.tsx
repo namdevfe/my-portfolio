@@ -14,12 +14,11 @@ const jetBrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'My Portfolio',
-  description: 'My Portfolio',
-  openGraph: {
-    title: 'My Portfolio',
-    description: 'This is webiste is used to introduce about myself'
-  }
+  title: {
+    template: '%s | Portfolio',
+    default: 'My Portfolio'
+  },
+  description: 'Website my portfolio is built by Naw Dev'
 }
 
 export default function RootLayout({
