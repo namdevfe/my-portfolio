@@ -114,6 +114,11 @@ export const experience: ExperienceType = {
       position: 'Front-End Developer',
       duration: 'Mar 2024 - Apr 2024 ',
       company: 'Martech JSC Company'
+    },
+    {
+      position: 'FullStack Developer',
+      duration: 'Oct 2024 - Jan 2025',
+      company: 'YHocSo Company'
     }
   ]
 }
