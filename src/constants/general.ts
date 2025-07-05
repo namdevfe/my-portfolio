@@ -31,7 +31,7 @@ export const menus: MenuType[] = [
 // About data
 export type AboutType = {
   title: string
-  description: string
+  description?: string
   info: {
     fieldName: string
     fieldValue: string
@@ -40,8 +40,8 @@ export type AboutType = {
 
 export const about: AboutType = {
   title: 'About me',
-  description:
-    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In rem deleniti, repellat ab esse sapiente adipisci inventore ipsam voluptas dolor blanditiis nemo ipsa ex maxime recusandae doloribus delectus quam autem?',
+  // description:
+  //   'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In rem deleniti, repellat ab esse sapiente adipisci inventore ipsam voluptas dolor blanditiis nemo ipsa ex maxime recusandae doloribus delectus quam autem?',
   info: [
     {
       fieldName: 'Name',
@@ -70,7 +70,7 @@ export const about: AboutType = {
 export type ExperienceType = {
   icon: string
   title: string
-  description: string
+  description?: string
   item: {
     company?: string
     position: string
@@ -82,9 +82,15 @@ export type ExperienceType = {
 export const experience: ExperienceType = {
   icon: '',
   title: 'My Experience',
-  description:
-    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In rem deleniti, repellat ab esse sapiente adipisci inventore ipsam voluptas dolor blanditiis nemo ipsa ex maxime recusandae doloribus delectus quam autem?',
+  // description:
+  //   'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In rem deleniti, repellat ab esse sapiente adipisci inventore ipsam voluptas dolor blanditiis nemo ipsa ex maxime recusandae doloribus delectus quam autem?',
   item: [
+    {
+      position: 'Full-Stack Developer',
+      duration: 'May 2025 - Present',
+      company: 'Xherozone JSC',
+      project: 'Xherozone Project Management (XPM)'
+    },
     {
       position: 'Front-End Developer',
       duration: 'Jan 2024 - Feb 2024',
@@ -127,7 +133,7 @@ export const experience: ExperienceType = {
 export type EducationType = {
   icon: string
   title: string
-  description: string
+  description?: string
   item: {
     institution: string
     degree: string
@@ -138,8 +144,8 @@ export type EducationType = {
 export const education: EducationType = {
   icon: '',
   title: 'My Education',
-  description:
-    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In rem deleniti, repellat ab esse sapiente adipisci inventore ipsam voluptas dolor blanditiis nemo ipsa ex maxime recusandae doloribus delectus quam autem?',
+  // description:
+  // 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In rem deleniti, repellat ab esse sapiente adipisci inventore ipsam voluptas dolor blanditiis nemo ipsa ex maxime recusandae doloribus delectus quam autem?',
   item: [
     {
       institution: 'Nguyen Tat Thanh University',
@@ -231,6 +237,40 @@ export type ProjectType = {
 export const projects: ProjectType[] = [
   {
     num: '01',
+    category: 'full-stack',
+    title: 'Xherozone Project Management (XPM)',
+    description:
+      'XPM is a web-based platform that enables independent project and workforce management across multiple organizations. It includes modules for HR management, timekeeping via mobile app, organizational structure visualization, and RACI-based task assignment. The system features real-time notifications (Firebase) and is optimized for mobile responsiveness',
+    techStack: [
+      'Html',
+      'Css',
+      'Typescript',
+      'React.js',
+      'Next.js',
+      'TailwindCss',
+      'Redux',
+      'Redux Toolkit Query',
+      'Javascript',
+      'Hapi.js',
+      'MongoDB'
+    ],
+    image: '/img/xpm.png',
+    live: 'https://xpm.xheroapp.com',
+    sourceCode: 'Private'
+  },
+  {
+    num: '02',
+    category: 'front-end',
+    title: 'Rophim Clone',
+    description:
+      'A clone project inspired by the movie streaming site rophim.me, built with Next.js 14 (App Router), TypeScript, and Tailwind CSS. The app focuses on UI/UX, responsive design, and essential features for a seamless viewing experience',
+    techStack: ['TypeScript', 'NextJS 14 (app router)', 'TailwindCSS'],
+    image: '/img/rophim-clone.png',
+    live: 'https://rophim-clone.netlify.app',
+    sourceCode: 'https://github.com/namdevfe/rophim-clone'
+  },
+  {
+    num: '03',
     category: 'front-end',
     title: 'My Portfolio',
     description:
@@ -241,7 +281,25 @@ export const projects: ProjectType[] = [
     sourceCode: 'https://github.com/namdevfe/my-portfolio'
   },
   {
-    num: '02',
+    num: '04',
+    category: 'full-stack',
+    title: 'BeeClinic',
+    description:
+      'This system allows patients to schedule appointments, after which doctors can provide consultations either at home or in the clinic. Clinic owners can utilize various features such as patient management, prescription issuing, inventory management, clinical services, and procedures. Advanced features are available through subscription upgrades',
+    techStack: [
+      'Typescript',
+      'React.js (vite)',
+      'Next.js 14 (page router)',
+      'Antd',
+      'Express',
+      'MongoDB'
+    ],
+    image: '/img/beeclinic.png',
+    live: 'https://bee-clinic-admin.vercel.app/',
+    sourceCode: 'Private'
+  },
+  {
+    num: '05',
     category: 'front-end',
     title: 'CFD Shop',
     description:
@@ -259,7 +317,7 @@ export const projects: ProjectType[] = [
     sourceCode: 'https://github.com/namdevfe/cfd-shop'
   },
   {
-    num: '03',
+    num: '06',
     category: 'front-end',
     title: 'CFD Courses',
     description:
@@ -270,7 +328,7 @@ export const projects: ProjectType[] = [
     sourceCode: 'https://github.com/namdevfe/cfd-courses'
   },
   {
-    num: '04',
+    num: '07',
     category: 'front-end',
     title: 'Finance Flow',
     description:
@@ -281,7 +339,7 @@ export const projects: ProjectType[] = [
     sourceCode: 'https://github.com/nguyenkimquocnam-dev/finance-flow'
   },
   {
-    num: '05',
+    num: '08',
     category: 'front-end',
     title: 'Wooder',
     description:
