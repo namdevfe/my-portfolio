@@ -93,6 +93,24 @@ export const experience: ExperienceType = {
     },
     {
       position: 'Front-End Developer',
+      duration: 'Apr 2025 - May 2025',
+      company: 'Freelancer',
+      project: 'Rophim Clone'
+    },
+    {
+      position: 'FullStack Developer',
+      duration: 'Oct 2024 - Jan 2025',
+      company: 'Y Học Số Co.Ltd',
+      project: 'BeeClinic'
+    },
+    {
+      position: 'Front-End Developer',
+      duration: 'Mar 2024 - Apr 2024 ',
+      company: 'Martech JSC',
+      project: 'Ticket Management'
+    },
+    {
+      position: 'Front-End Developer',
       duration: 'Jan 2024 - Feb 2024',
       company: 'CFD Circle',
       project: 'CFD Shop'
@@ -115,16 +133,6 @@ export const experience: ExperienceType = {
       duration: 'Oct 2023 - Nov 2023',
       project: 'Wooder Landing Page',
       company: 'CFD Circle'
-    },
-    {
-      position: 'Front-End Developer',
-      duration: 'Mar 2024 - Apr 2024 ',
-      company: 'Martech JSC Company'
-    },
-    {
-      position: 'FullStack Developer',
-      duration: 'Oct 2024 - Jan 2025',
-      company: 'YHocSo Company'
     }
   ]
 }
